@@ -1,0 +1,62 @@
+
+.centered-form{
+    margin-top: 60px;
+}
+
+.centered-form .panel{
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+h5 {
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding: 0;
+    text-align: center;
+}
+h5:after {
+    display: inline-block;
+    margin: 0 0 4px 5px;
+    height: 1px;
+    content: " ";
+    text-shadow: none;
+    background-color: #999;
+    width: 70px;
+}
+h5:before {
+    display: inline-block;
+    margin: 0 5px 4px 0;
+    height: 1px;
+    content: " ";
+    text-shadow: none;
+    background-color: #999;
+    width:70px;
+}
+
+a.pwd {
+    float:right;
+    position: relative;
+    bottom:-2px;
+}
+
+
+form textarea{
+    display: block;
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    resize: vertical;
+    height:150px!important;
+    font: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    color:  black;
+    padding: 18px;
+    margin-bottom: 10px;
+
+
+}
+
+input#email {
+    margin-bottom: 10px;
+}

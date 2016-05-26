@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="The largest retail store in the world. We sell everything from the 0.9 cent to 1B dollars"/>
+    <meta name="keyword" content="smart tv, smart phone, smart home, smart pets, smart people" />
+    <meta name="robots" content="index, follow"/>
+
+    <title>Let's Shop</title>
+
+    <!-- CSS files ----->
+    <link ref="stylesheet" href="css/main.css">
+    <link ref="stylesheet" href="css/navbar.css">
+    <link rel="icon" href="images/pp.ico"/>
+    <link rel="stylesheet" href="css/footer.css"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+
+
+    <style>
+
+        #header{
+            min-height: 90px;
+        }
+        #footer{
+            min-height: 60px;
+        }
+        #header, #footer{
+            background: white;
+        }
+        #sidebar{
+            background: #dbdfe5;
+        }
+        #content{
+            background: #b4bac0;
+        }
+        #sidebar, #content{
+            min-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="header">
+
+                    <nav class="navbar navbar-default " role="navigation" >
+                        <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#">Home</a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+                                <div >
+                                    <ul class="nav navbar-nav">
+                                        <li class="active"><a href="#">Hot Deals</a></li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">TVs</a></li>
+                                                <li><a href="#">Phones</a></li>
+                                                <li><a href="#">Games</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Smart Homes</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Smart People</a></li>
+                                            </ul>
+                                        </li>
+
+
+                                    </ul>
+                                </div>
+
+                                <div style="float: left">
+
+                                        <form class="navbar-form" role="search" method="get" id="search-form" name="search-form">
+
+                                            <div class="input-group" style="border-radius: 4px">
+                                                <div class="btn-group pull-left" style="display:inline">
+                                                    <a class="btn  dropdown-toggle" data-toggle="dropdown" href="#" style="border: 1px solid;
+    border-radius: 4px 0 0 4px;">All <span class="caret"></span></a>
+
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#">TVs</a></li>
+                                                        <li><a href="#">Phones</a></li>
+                                                        <li><a href="#">Games</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Smart Homes</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="#">Smart People</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div style="display: inline">
+                                                    <input style="border-left:none" type="text" class="form-control" placeholder="Search" id="query" name="query" value="">
+                                                </div>
+
+                                                <div class="input-group-btn">
+                                                    <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                </div>
+
+                                <div style="display: inline; position: absolute; top: 0px; right: 20px">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="html/About.html">About</a></li>
+                                        <li><a href="html/Contact.html">Contact Us</a></li>
+                                        <li><a href="html/login.html">Login</a></li>
+
+                                        <!--li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                                            <ul id="login-dp" class="dropdown-menu">
+                                                <li>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            Login via
+                                                            <div class="social-buttons">
+                                                                <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                                                <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                                                            </div>
+                                                            or
+                                                            <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                                                <div class="form-group">
+                                                                    <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                                                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                                                    <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                                                                </div>
+                                                                <div class="checkbox">
+                                                                    <label>
+                                                                        <input type="checkbox"> keep me logged-in
+                                                                    </label>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="bottom text-center">
+                                                            New here ? <a href="#"><b>Join Us</b></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li-->
+                                        <li><a  href="html/signup.html">Register</a></li>
+
+                                    </ul>
+                                </div>
+
+                            </div><!-- /.navbar-collapse -->
+                        </div><!-- /.container-fluid -->
+                    </nav>
+
+
+
+                </div>
+            </div>
+
+            <div class="clearfix visible-md-block"></div>
+        </div>
+
+
+
+        <!------------------ Side Bar ------------------------>
+        <div class="row">
+            <div class="col-md-2">
+                <div id="sidebar">side bar</div>
+            </div>
+            <!------------------ Content ------------------------>
+            <div class="col-md-10">
+                <div id="content">content</div>
+            </div>
+        </div>
+
+
+
+        <!------------------ Footer ------------------------>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="footer">
+                    <footer class="footer-distributed">
+
+                        <div class="footer-left">
+
+                            <img src="images/team_597.png">
+
+                            <p class="footer-links">
+                                <a href="#">Home</a>
+                                ·
+                                <a href="#">Blog</a>
+                                ·
+                                <a href="#">Pricing</a>
+                                ·
+                                <a href="#">About</a>
+                                ·
+                                <a href="#">Faq</a>
+                                ·
+                                <a href="#">Contact</a>
+                            </p>
+
+                            <p class="footer-company-name">Digital Chaos &copy; 1987</p>
+                        </div>
+
+                        <div class="footer-center">
+
+                            <div>
+                                <i class="fa fa-map-marker"></i>
+                                <p><span>46 walker Ave</span> Edison, NJ</p>
+                            </div>
+
+                            <div>
+                                <i class="fa fa-phone"></i>
+                                <p>+1 911 911 911</p>
+                            </div>
+
+                            <div>
+                                <i class="fa fa-envelope"></i>
+                                <p><a href="mailto:support@dc.com">support@dc.com</a></p>
+                            </div>
+
+                        </div>
+
+                        <div class="footer-right">
+
+                            <p class="footer-company-about">
+                                <span>About the company</span>
+                                Digital Chaos is the largest retail store in the world with world-class lowest-price products range from 0.9 cent to $1 Bil.
+                            </p>
+
+                            <div class="footer-icons">
+
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-github"></i></a>
+
+                            </div>
+
+                        </div>
+
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

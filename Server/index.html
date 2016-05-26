@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <!--script type="text/javascript" src="validator.min.js"></script-->
+
+</head>
+<body>
+<h1>Yor name</h1>
+<input id="name" type="text" />
+<h2>input text to chat</h2>
+<input id="chatbox" type="text"/>
+<button onclick="sendMessage()">Send</button>
+<div id = "chatlog"  style="width: 400px; border: solid 1px"> </div>
+
+<script>
+
+    var socketio = io.connect("localhost:3000");
+    var name;
+    socketio.on("message_to_client", function (data) {
+        /*
+        var d = data["message"];
+        var arr = d.split(":");
+        if(arr[0] == name) {
+            document.getElementById("chatlog").appendChild(document.createTextNode(arr[1]));
+        } else {
+            document.getElementById("chatlog").appendChild(document.createTextNode(data["messsage"]));
+        }*/
+
+        document.getElementById("chatlog").appendChild(document.createTextNode(data["message"]));
+
+        document.getElementById("chatlog").appendChild(document.createElement("br"));
+
+    })
+
+
+    function sendMessage() {
+
+       // alert(validator.isEmail("abc@gmail.com"));
+        name = document.getElementById("name").value;
+        if(name == "") {
+            name = "Anonymous";
+        }
+        name += ":";
+        var msg = name + document.getElementById("chatbox").value;
+        socketio.emit("message_to_server", {message:msg});
+
+    }
+
+
+
+
+</script>
+
+</body>
+</html>
